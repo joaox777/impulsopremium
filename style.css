@@ -37,6 +37,83 @@ html ::-webkit-scrollbar{
     height: 700px;
 }
 
+#header{
+    text-align: center;
+}
+
+#header li {
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+#header ul li {
+    display: inline-block; 
+    margin-right: 0;
+}
+
+#container-01-main a{
+    color: var(--text-color);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/*Menu*/
+.menu-button {
+    color: var(--title-color);
+    display: none;
+    cursor: pointer;
+    width: 50px; 
+    height: 50px;
+    font-size: 24px;
+    margin: 10px;
+    margin-left: 15px;
+}
+
+
+/* Estilo para o menu principal */
+#container-01-main {
+
+    color: white;
+}
+
+#header ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Estilos para telas pequenas (max-width: 1000px) */
+@media screen and (max-width: 1000px) {
+    .menu-button {
+        display: block;
+        position: absolute;
+    }
+
+    #header ul {
+        display: none; 
+        text-align: left; 
+        padding: 20px 10px; 
+        background-color: rgba(0, 0, 0, 0.253);
+        height: 600px;
+    }
+
+    #header ul li {
+        display: block;
+        padding: 15px;
+    }
+
+    #header li {
+        display: block; 
+        padding: 10px;
+        margin-top: 30px;
+    }
+    
+}
+
+
+
 /* Container 2 */
 #container-02{
     background-color: var(--main-color-background);

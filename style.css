@@ -45,7 +45,8 @@ html ::-webkit-scrollbar{
 }
 
 #container-02 hr{
-    background-color: #FF4A00;
+    background: rgb(0,0,153);
+    background: linear-gradient(106deg, rgba(0,0,153,1) 26%, rgba(255,74,0,1) 100%);
     width: 5%;
     padding: 2px;
     margin: 10px auto;
@@ -57,15 +58,29 @@ html ::-webkit-scrollbar{
     background-color: var(--sec-color-background);
     height: 500px;
 }
+
+#container-03 h1{
+    text-align: center;
+    padding: 5px;
+}
 /* Container 4 */
 #container-04{
     background-color: var(--main-color-background);
     height: 500px;
 }   
+
+#container-04 h1{
+    text-align: center;
+    padding: 5px;
+}
 /* Container 5 */
 #container-05{
     background-color: var(--sec-color-background);
     height: 500px;
+}
+
+#container-05 h2{
+    text-align: center;
 }
 /* Footer */
 

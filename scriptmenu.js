@@ -1,3 +1,5 @@
+
+
 // Função para mostrar/ocultar o menu em telas menores
 function toggleMenu() {
     var menu = document.getElementById('header').querySelector('ul');
@@ -10,3 +12,9 @@ function toggleMenu() {
 
 // Adicione um evento de clique ao botão do menu de hambúrguer
 document.getElementById('menu-button').addEventListener('click', toggleMenu);
+
+
+
+
+
+

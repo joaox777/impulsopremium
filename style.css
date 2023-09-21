@@ -37,6 +37,14 @@ html ::-webkit-scrollbar{
     height: 700px;
 }
 
+@media screen and (max-width: 1400px) {
+
+    #container-01-main {
+        height: 550px;
+    }
+
+}
+
 #header{
     text-align: center;
 }
@@ -112,7 +120,34 @@ html ::-webkit-scrollbar{
     
 }
 
+/*Slider*/
 
+
+/* Esconda inicialmente o slider pequeno */
+#slider-container-small {
+    display: none;
+}
+
+/* Media query para mostrar o slider correto com base no tamanho da tela */
+@media screen and (max-width: 1400px) {
+    #slider-container-small {
+        display: block;
+    }
+    #slider-container-large {
+        display: none;
+    }
+}
+
+/* Estilos para o slider */
+.slide{
+    text-align: center;
+}
+
+.slide img {
+    width: 90%;
+    margin: 40% auto;
+    border-radius: 15px;
+}
 
 /* Container 2 */
 #container-02{
@@ -130,6 +165,7 @@ html ::-webkit-scrollbar{
     border-radius: 10px;
     border: none;
 }
+
 /* Container 3 */
 #container-03{
     background-color: var(--sec-color-background);
@@ -140,6 +176,7 @@ html ::-webkit-scrollbar{
     text-align: center;
     padding: 5px;
 }
+
 /* Container 4 */
 #container-04{
     background-color: var(--main-color-background);

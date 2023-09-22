@@ -8,8 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-
+    
 
     <title>ImpulsoPremium</title>
 </head>
@@ -19,84 +18,53 @@
 
 <header id="header">
     <ul>
-        <li><a href="">Youtube</a></li>
+        <li>&#xf62b;<a href="">Youtube</a></li>
         <li><a href="">Instagram</a></li>
         <li><a href="">TikTok</a></li>
         <li><a href="">Twitter (X)</a></li>
         <li><a href="">THREADS (Em Breve)</a></li>
         <li><a href="">Discord (Em Breve)</a></li>
         <li><a href="">Telegram (Em Breve)</a></li>
-
     </ul>
 </header>
 <!-- Container do menu principal -->
 <div id="container-01-main">
-    <div id="container-01-main">
-    <!-- Versão grande da imagem (para telas maiores) -->
-    <div id="slider-container-large">
-        <div class="slide"><img src="https://i.imgur.com/m5aDJk3.jpg" alt="Slide 1"></div>
-        <div class="slide"><img src="https://i.imgur.com/m5aDJk3.jpg" alt="Slide 2"></div>
-        <div class="slide"><img src="https://i.imgur.com/m5aDJk3.jpg" alt="Slide 3"></div>
-        <!-- Adicione mais slides conforme necessário -->
-    </div>
-    <!-- Versão pequena da imagem (para telas menores) -->
-    <div id="slider-container-small">
-        <div class="slide"><img src="https://i.imgur.com/vHJdeUo.png" alt="Slide 1"></div>
-        <div class="slide"><img src="https://i.imgur.com/Bp9WlZF.png" alt="Slide 2"></div>
-        <div class="slide"><img src="https://i.imgur.com/tDFOkBl.png" alt="Slide 3"></div>
-        <!-- Adicione mais slides conforme necessário -->
-    </div>
 
-    <script>
-        $(document).ready(function(){
-            $('#slider-container-large').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 5000, // Mudar de slide a cada 5 segundos
-            });
-        });
-        </script>
-        
-        <!-- Script para configurar o slider pequeno (para telas menores) -->
-        <script>
-        $(document).ready(function(){
-            $('#slider-container-small').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 5000, // Mudar de slide a cada 5 segundos
-            });
-        });
-        </script>
-        
-        <!-- Script para mostrar/ocultar o menu em telas menores -->
-        <script>
-        function toggleMenu() {
-            var menu = document.getElementById('header').querySelector('ul');
-            if (menu.style.display === 'block' || menu.style.display === '') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-        
-        document.getElementById('menu-button').addEventListener('click', toggleMenu);
-        </script>
+
+<!-- Container do carrossel para tela grande -->
+<div class="carousel-large">
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/U7IoWCm.jpg" alt="Imagem 1 Grande">
     </div>
-    
-    
-    <script>
-        $(document).ready(function(){
-            $('#slider-container').slick({
-                slidesToShow: 1, // Mostrar apenas 1 slide por vez
-                slidesToScroll: 999, // Rolar 1 slide por vez
-                autoplay: true, // Ativar a reprodução automática
-                autoplaySpeed: 5000, // Intervalo de 5 segundos entre os slides (em milissegundos)
-            });
-        });
-    </script> 
-    
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/m5aDJk3.jpg" alt="Imagem 2 Grande">
+    </div>
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/U7IoWCm.jpg" alt="Imagem 3 Grande">
+    </div>
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/m5aDJk3.jpg" alt="Imagem 4 Grande">
+    </div>
+</div>
+
+<!-- Container do carrossel para tela pequena -->
+<div class="carousel-small">
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/Bp9WlZF.png" alt="Imagem 1 Pequena">
+    </div>
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/tDFOkBl.png" alt="Imagem 2 Pequena">
+    </div>
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/Bp9WlZF.png" alt="Imagem 3 Pequena">
+    </div>
+    <div class="carousel-slide">
+        <img src="https://i.imgur.com/tDFOkBl.png" alt="Imagem 4 Pequena">
+    </div>
+</div>
+<button>Saiba Mais</button>
+
+
 </div>
 
 <!--CONTAINER 02-->

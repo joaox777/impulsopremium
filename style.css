@@ -4,13 +4,18 @@
     --secondary-color: #000099;
     --text-color: white;
     --text-color-night: black;
-    --title-color: #FF4A00;
+    --orange-maincolor: #FF4A00;
 }
 
 /* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
+}
+
+body{
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* barra de rolagem */
@@ -34,7 +39,8 @@ html ::-webkit-scrollbar{
 #container-01-main {
     background: rgb(0,0,153);
     background: linear-gradient(106deg, rgba(0,0,153,1) 26%, rgba(255,74,0,1) 100%);
-    height: 700px;
+    height: 750px;
+    text-align: center;
 }
 
 @media screen and (max-width: 1400px) {
@@ -60,18 +66,17 @@ html ::-webkit-scrollbar{
     margin-right: 0;
 }
 
-#container-01-main a{
-    color: var(--text-color);
+#header a{
+    color: var(--text-color-night);
     font-weight: bolder;
     text-decoration: none;
 }
 
 /*Menu*/
 .menu-button {
-    color: var(--title-color);
+    color: var(--orange-maincolor);
     display: none;
     cursor: pointer;
-    width: 50px; 
     height: 50px;
     font-size: 24px;
     margin: 10px;
@@ -80,10 +85,6 @@ html ::-webkit-scrollbar{
 
 
 /* Estilo para o menu principal */
-#container-01-main {
-
-    color: white;
-}
 
 #header ul {
     list-style: none;
@@ -122,32 +123,161 @@ html ::-webkit-scrollbar{
 
 /*Slider*/
 
-
-/* Esconda inicialmente o slider pequeno */
-#slider-container-small {
-    display: none;
-}
-
-/* Media query para mostrar o slider correto com base no tamanho da tela */
-@media screen and (max-width: 1400px) {
-    #slider-container-small {
-        display: block;
+/* Estilos para tela grande (largura mínima de 1400px) */
+@media screen and (max-width: 5000px) {
+    .carousel-small {
+        display: none;
     }
-    #slider-container-large {
+    .carousel-large .carousel-slide img{
+        margin-top: 20px;
+        width: 1100px;
+        height: 600px;
+        border-radius: 15px;
+    }
+    .carousel-small {
         display: none;
     }
 }
 
-/* Estilos para o slider */
-.slide{
-    text-align: center;
+@media screen and (max-width: 1400px) {
+    .carousel-large {
+        display: block;
+    }
+    .carousel-large .carousel-slide img{
+        margin-top: 30px;
+        width: 900px;
+        height: 450px;
+        border-radius: 15px;
+    }
+    .carousel-small {
+        display: none;
+    }
 }
 
-.slide img {
-    width: 90%;
-    margin: 40% auto;
-    border-radius: 15px;
+@media screen and (max-width: 1300px) {
+    .carousel-large .carousel-slide img{
+        margin-top: 30px;
+        width: 900px;
+        border-radius: 15px;
+    }
+
+    .carousel-small {
+        display: none;
+    }
+    
 }
+
+/* Estilos para tela pequena (largura máxima de 1000px) */
+
+@media screen and (max-width: 1000px) {
+    .carousel-large .carousel-slide img{
+        margin-top: 30px;
+        width: 850px;
+        border-radius: 15px;
+    }
+    .carousel-large {
+        display: block;
+    }
+    .carousel-small {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    .carousel-large .carousel-slide img{
+        margin-top: 70px;
+        width: 750px;
+        border-radius: 15px;
+    }
+    #container-01-main{
+        height: 600px;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .carousel-small .carousel-slide img{
+        margin-top: 70px;
+        width: 450px;
+        border-radius: 15px;
+    }
+    .carousel-large {
+        display: none;
+    }
+    .carousel-small {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carousel-small .carousel-slide img{
+        margin-top: 70px;
+        width: 350px;
+        border-radius: 15px;
+    }
+    #container-01-main{
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .carousel-small .carousel-slide img{
+        margin-top: 70px;
+        width: 330px;
+        border-radius: 15px;
+    }
+    #container-01-main{
+        height: 470px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .carousel-small .carousel-slide img{
+        margin-top: 70px;
+        width: 270px;
+        border-radius: 15px;
+    }
+    #container-01-main{
+        height: 400px;
+    }
+}
+
+/*Button Slider*/
+
+#container-01-main button {
+    width: 165px;
+    height: 62px;
+    margin: 15px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: black;
+    transition: 0.1s;
+    font-weight: bolder;
+  }
+  
+  #container-01-main button::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,   17.8%, rgba(2,245,255,1) 100.2% );
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  #container-01-main button:active {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient( circle farthest-corner at 10% 20%,  var(--orange-maincolor) 17.8%, var(--secondary-color) 100.2% );
+    transition: 0.5s;
+  }
+
 
 /* Container 2 */
 #container-02{

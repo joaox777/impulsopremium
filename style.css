@@ -1,10 +1,20 @@
+/*Fontes*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&display=swap');
+/*  font-family: 'Reem Kufi Fun', sans-serif;        */
+
+/*Root*/
+
 :root {
     --main-color-background: #D9D9D9;
     --sec-color-background: #d9d9d9a4;
-    --secondary-color: #000099;
     --text-color: white;
     --text-color-night: black;
-    --orange-maincolor: #FF4A00;
+
+
+    --black-main-color: #101220;
+    --secondarycolor:#004AAD;
+    --sec-maincolor: #004AAD;
 }
 
 /* Configurações Globais */
@@ -25,7 +35,7 @@ html ::-webkit-scrollbar{
   }
   
   html ::-webkit-scrollbar-thumb{
-    background-color: var(--secondary-color);
+    background-color: var(--black-main-color);
     border-radius: 10px;
     width: 5px;
   }
@@ -38,7 +48,7 @@ html ::-webkit-scrollbar{
 /* Container 1 */
 #container-01-main {
     background: rgb(0,0,153);
-    background: linear-gradient(106deg, rgba(0,0,153,1) 26%, rgba(255,74,0,1) 100%);
+    background: linear-gradient(106deg, var(--secondarycolor) 26%, var(--black-main-color) 100%);
     height: 750px;
     text-align: center;
 }
@@ -46,7 +56,7 @@ html ::-webkit-scrollbar{
 @media screen and (max-width: 1400px) {
 
     #container-01-main {
-        height: 550px;
+        height: 600px;
     }
 
 }
@@ -56,6 +66,9 @@ html ::-webkit-scrollbar{
 }
 
 #header li {
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-weight: bolder;
+    color: #000099;
     list-style: none;
     padding: 5px;
     margin: 10px;
@@ -73,14 +86,34 @@ html ::-webkit-scrollbar{
 }
 
 /*Menu*/
+
+#menu{
+    
+}
+
+#menu ul {
+    display: none;
+}
+
+#menu.active ul {
+    display: block;
+}
+
 .menu-button {
-    color: var(--orange-maincolor);
+    color: var(--sec-color-background);
     display: none;
     cursor: pointer;
     height: 50px;
     font-size: 24px;
     margin: 10px;
     margin-left: 15px;
+}
+
+.menu-button.active {
+    display: block;
+    position: absolute;
+    top: 15%; /* Posiciona o botão abaixo do menu */
+    left: 0;
 }
 
 
@@ -191,7 +224,7 @@ html ::-webkit-scrollbar{
         border-radius: 15px;
     }
     #container-01-main{
-        height: 600px;
+        height: 630px;
     }
     
 }
@@ -217,7 +250,7 @@ html ::-webkit-scrollbar{
         border-radius: 15px;
     }
     #container-01-main{
-        height: 500px;
+        height: 530px;
     }
 }
 
@@ -228,7 +261,7 @@ html ::-webkit-scrollbar{
         border-radius: 15px;
     }
     #container-01-main{
-        height: 470px;
+        height: 530px;
     }
 }
 
@@ -239,9 +272,14 @@ html ::-webkit-scrollbar{
         border-radius: 15px;
     }
     #container-01-main{
-        height: 400px;
+        height: 430px;
+    }
+    #container-01-main button{
+        width: 100px;
+        height: 40px;
     }
 }
+
 
 /*Button Slider*/
 
@@ -259,6 +297,15 @@ html ::-webkit-scrollbar{
     transition: 0.1s;
     font-weight: bolder;
   }
+
+  @media screen and (max-width: 300px) {
+    #container-01-main button{
+        width: 120px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
   
   #container-01-main button::after {
     content: '';
@@ -274,7 +321,7 @@ html ::-webkit-scrollbar{
   
   #container-01-main button:active {
     transform: scale(0.9) rotate(3deg);
-    background: radial-gradient( circle farthest-corner at 10% 20%,  var(--orange-maincolor) 17.8%, var(--secondary-color) 100.2% );
+    background: radial-gradient( circle farthest-corner at 10% 20%,  var(--sec-maincolor) 17.8%, var(--black-main-color) 100.2% );
     transition: 0.5s;
   }
 

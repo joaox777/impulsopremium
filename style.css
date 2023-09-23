@@ -435,7 +435,7 @@ html ::-webkit-scrollbar{
 /* Container 2 */
 #container-02{
     background-color: var(--main-color-background);
-    height: 500px;
+
     text-align: center;
 }
 

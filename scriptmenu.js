@@ -1,35 +1,28 @@
-
 // Função para mostrar/ocultar o menu em telas menores e ajustar a posição do botão
 function toggleMenu() {
     var menu = document.getElementById('menu');
     var menuButton = document.getElementById('menu-button');
-    
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
+    var closeButton = document.getElementById('close-button');
+
+    if (menu.classList.contains('opened')) {
+        menu.classList.remove('opened');
         menuButton.classList.remove('active');
+        closeButton.style.display = 'none';
     } else {
-        menu.classList.add('active');
+        menu.classList.add('opened');
         menuButton.classList.add('active');
+        closeButton.style.display = 'block';
     }
 }
 
-
 // Adicione um ouvinte de eventos para o botão de hambúrguer
-var menuButton = document.getElementById('menu-button');
-menuButton.addEventListener('click', toggleMenu);
+document.getElementById('menu-button').addEventListener('click', toggleMenu);
 
-// Adicione um ouvinte de eventos para ocultar o menu quando um link for clicado
-var menuLinks = document.querySelectorAll('#menu a');
-menuLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-        var menu = document.getElementById('menu');
-        menu.classList.remove('active');
-    });
-});
+// Adicione um ouvinte de eventos para o botão de fechar
+document.getElementById('close-button').addEventListener('click', toggleMenu);
 
 
 // script slider
-
 $(document).ready(function () {
     const largeCarousel = $(".carousel-large");
     const smallCarousel = $(".carousel-small");
@@ -55,6 +48,3 @@ $(document).ready(function () {
     // Configure o intervalo para trocar os slides a cada 5 segundos
     setInterval(nextSlide, 5000);
 });
-
-
-

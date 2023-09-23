@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/e07753efa6.js" crossorigin="anonymous"></script>
+    
 
     <title>ImpulsoPremium</title>
 
@@ -21,16 +23,34 @@
     <div id="menu-button" class="menu-button">&#9776;</div>
 
     <!-- Menu principal -->
-    <nav id="menu">
+
+    <nav  class="menu-big">
+
+        <div id="logo">
+            <img id="logo-image" src="https://i.imgur.com/X0N24cQ.png" alt="">
+        </div>
         <ul>
-            <li><a href="">Youtube</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">TikTok</a></li>
-            <li><a href="">Twitter (X)</a></li>
-            <li><a href="">THREADS (Em Breve)</a></li>
-            <li><a href="">Discord (Em Breve)</a></li>
-            <li><a href="">Telegram (Em Breve)</a></li>
+            <li><a href="">Youtube</a> <i class="bi bi-youtube"></i></li>
+            <li><a href="">Instagram</a> <i class="bi bi-instagram"></i></li>
+            <li><a href="">TikTok</a> <i class="bi bi-tiktok"></i></li>
+            <li><a href="">Twitter (X)</a> <i class="bi bi-twitter"></i></li>
+            <li><a href="">THREADS (Em Breve)</a> <i class="bi bi-threads"></i></li>
+            <li><a href="">Discord (Em Breve)</a> <i class="bi bi-discord"></i></li>
+            <li><a href="">Telegram (Em Breve)</a> <i class="bi bi-telegram"></i></li>
         </ul>
+    </nav>
+
+    <nav id="menu" class="closed">
+        <ul>
+            <li><a href="">Youtube</a> <i class="bi bi-youtube"></i></li>
+            <li><a href="">Instagram</a> <i class="bi bi-instagram"></i></li>
+            <li><a href="">TikTok</a> <i class="bi bi-tiktok"></i></li>
+            <li><a href="">Twitter (X)</a> <i class="bi bi-twitter"></i></li>
+            <li><a href="">THREADS (Em Breve)</a> <i class="bi bi-threads"></i></li>
+            <li><a href="">Discord (Em Breve)</a> <i class="bi bi-discord"></i></li>
+            <li><a href="">Telegram (Em Breve)</a> <i class="bi bi-telegram"></i></li>
+        </ul>
+            <span id="close-button" class="close-button"><i class="bi bi-arrow-up-circle-fill"></i></span>
     </nav>
 <!-- Container do menu principal -->
 <div id="container-01-main">
@@ -38,16 +58,16 @@
 <!-- Container do carrossel para tela grande -->
 <div class="carousel-large">
     <div class="carousel-slide">
-        <img src="https://i.imgur.com/U7IoWCm.jpg" alt="Imagem 1 Grande">
+        <img src="https://i.imgur.com/TWwx4uX.png" alt="Imagem 1 Grande">
     </div>
     <div class="carousel-slide">
-        <img src="https://i.imgur.com/m5aDJk3.jpg" alt="Imagem 2 Grande">
+        <img src="https://i.imgur.com/6TIaOBG.png" alt="Imagem 2 Grande">
     </div>
     <div class="carousel-slide">
-        <img src="https://i.imgur.com/U7IoWCm.jpg" alt="Imagem 3 Grande">
+        <img src="https://i.imgur.com/TWwx4uX.png" alt="Imagem 3 Grande">
     </div>
     <div class="carousel-slide">
-        <img src="https://i.imgur.com/m5aDJk3.jpg" alt="Imagem 4 Grande">
+        <img src="https://i.imgur.com/6TIaOBG.png" alt="Imagem 4 Grande">
     </div>
 </div>
 
@@ -71,15 +91,34 @@
 
 </div>
 
-<!--CONTAINER 02-->
+<!--CONTAINER 02 - Garantias-->
     <div id="container-02">
-        <h1>Avaliações Dos Clientes</h1>
-        <hr>
+        <h2>Eleve Suas Redes Sociais a Novos Patamares com a <br>Impulso Premium BR</h2>
+        <hr class="hr-horizontal-main">
+            <div id="confiability-services">
+                <div class="services">
+                    <i class="fa-regular fa-star"></i>
+                    <p>Seguidores , Curtidas e Comentários Reais e de Qualidade</p>
+                </div>
+                <div class="services">
+                    <i class="fa-regular fa-clock"></i>
+                    <p>Entrega de resultados mais rapida do mercado</p>
+                </div>
+                <div class="services">
+                    <i class="fa-solid fa-lock"></i>
+                    <p>Segurança e Transparência em todos os pedidos</p>
+                </div>  
+                <div class="services">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <p>Garantia de 7 dias em todos os serviços</p>
+                </div>
+            </div>
     </div>  
 
     <!--CONTAINER 03-->
     <div id="container-03">
-        <h1>Eleve Suas Redes Sociais a Novos Patamares com a <br>Impulso Premium BR</h1>
+        <h1>Avaliações Dos Clientes</h1>
+        <hr>
     </div>
 
 <!--CONTAINER 04-->
@@ -94,7 +133,8 @@
     </div>
 </body>
 <script src="scriptmenu.js"></script>
+
+<a href=""><img id="whatsapp-icon" src="https://i.imgur.com/kCcXuNb.png" alt=""></a>
 <footer>
-    teste
 </footer>
 </html>
